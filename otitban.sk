@@ -6,9 +6,9 @@ command /bun [<text>] [<text>]:
 			execute console command "ban %arg 1% %arg 2%"
 			broadcast "&7Gracz &c%arg 1% &7zostal zbanowany za &c%arg 2%!"
 		arg 1 is not set:
-			send "&7/pun &c<nick> <powod>"
+			send "&7/bun &c<nick> <powod>"
 		arg 2 is not set: 
-			send "&7/pun &c<nick> <powod>"
+			send "&7/bun &c<nick> <powod>"
  
 command /unbun [<text>]:
 	permission: otit.ban
@@ -19,7 +19,7 @@ command /unbun [<text>]:
 			execute console command "unbanip %arg 1%"
 			broadcast "&7Gracz &c%arg 1% &7zostal odbanowany"
 		arg 1 is not set:
-			send "&7/ub &c<nick>"
+			send "&7/unbun &c<nick>"
 
 command /bun-IP [<text>] [<text>]:
 	permission: otit.banip
@@ -29,6 +29,7 @@ command /bun-IP [<text>] [<text>]:
 			execute console command "banip %arg 1% %arg 2%"
 			broadcast "&7Gracz &c%arg 1% &7zostal zbanowany na IP za &c%arg 2%!"
 		arg 1 is not set:
-			send "&7/pun-IP &c<nick> <powod>"
+			send "&7/bun-IP &c<nick> <powod>"
 		arg 2 is not set: 
+
 			send "&7/pun-IP &c<nick> <powod>"
