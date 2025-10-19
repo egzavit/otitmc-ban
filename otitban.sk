@@ -1,0 +1,34 @@
+command /bun [<text>] [<text>]:
+	permission: otit.ban
+	permission message: &4BLAD &cNie posiadasz permisji
+	trigger:
+		arg 2 is set:
+			execute console command "ban %arg 1% %arg 2%"
+			broadcast "&7Gracz &c%arg 1% &7zostal zbanowany za &c%arg 2%!"
+		arg 1 is not set:
+			send "&7/pun &c<nick> <powod>"
+		arg 2 is not set: 
+			send "&7/pun &c<nick> <powod>"
+ 
+command /unbun [<text>]:
+	permission: otit.ban
+	permission message: &4BLAD &cNie posiadasz permisji
+	trigger:
+		arg 1 is set:
+			execute console command "unban %arg 1%"
+			execute console command "unbanip %arg 1%"
+			broadcast "&7Gracz &c%arg 1% &7zostal odbanowany"
+		arg 1 is not set:
+			send "&7/ub &c<nick>"
+
+command /bun-IP [<text>] [<text>]:
+	permission: otit.banip
+	permission message: &4BLAD &cNie posiadasz permisji
+	trigger:
+		arg 2 is set:
+			execute console command "banip %arg 1% %arg 2%"
+			broadcast "&7Gracz &c%arg 1% &7zostal zbanowany na IP za &c%arg 2%!"
+		arg 1 is not set:
+			send "&7/pun-IP &c<nick> <powod>"
+		arg 2 is not set: 
+			send "&7/pun-IP &c<nick> <powod>"
